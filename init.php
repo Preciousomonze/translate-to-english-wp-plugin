@@ -4,7 +4,7 @@
  * Plugin URI:
  * Description: This plugin easily helps to change the Wordpress dashboard to english when activated, deactivate or uninstall if you want to go back to Italian.
  * Version: 1.0
- * Author: Precious Omonzejele <omonze@peepsipi.com>
+ * Author: Precious Omonzejele <me@codeexplorer.ninja>
  * Author URI: https://twitter.com/preciousomonze
  * Requires at least: 4.4
  * Tested up to: 4.9
@@ -13,13 +13,13 @@
   exit();
  /** on activation */
  function pp_activation(){
-     update_option('WPLANG','en_GB');
+     update_option('wplang','en_GB');
  }
  register_activation_hook(__FILE__,'pp_activation');
  /** on deactivation */
  function pp_deactivation(){
-     update_option('WPLANG','it_IT');
- }
+     update_option('wplang','it_IT');
+ }hemai
  register_deactivation_hook(__FILE__,'pp_deactivation');
  register_uninstall_hook(__FILE__,'pp_deactivation');
  //that's all :)
